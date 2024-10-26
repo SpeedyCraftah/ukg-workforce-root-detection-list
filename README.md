@@ -1,11 +1,13 @@
 # ukg-workforce-root-detection-list
 A list of ways I found the UKG Workforce (formally known as Kronos) app uses to check for root access.
 
+```
 *Sincerely,*
 
 *A former supermarket employee forced to use Kronos for checking timesheets.*
 
 (by the way android root users can still use your web dashboard which does the same thing as your app 😱😱😱)
+```
 
 ## Ways that the Kronos (or UKG workforce) app checks for root or modifications to device:
 - Checks if your phone is in `release` mode and if USB debugging is active (AKA `adb`).
