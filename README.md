@@ -1,5 +1,5 @@
 # ukg-workforce-root-detection-list
-A list of ways I found the UKG Workforce (formally known as Kronos) app uses to check for root access.
+A list of ways I found the UKG Workforce (formally known as Kronos) app uses to check for root access that I took the time to find out since it's nice being able to use an app that has no legitimate reason for checking for root access and purposefully making my life harder as a result.
 
 ```
 *Sincerely,*
