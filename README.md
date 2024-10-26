@@ -9,7 +9,7 @@ A list of ways I found the UKG Workforce (formally known as Kronos) app uses to 
 (by the way android root users can still use your web dashboard which does the same thing as your app 😱😱)
 ```
 
-## Ways that the Kronos (or UKG workforce) app checks for root or modifications to device:
+## Ways that the Kronos (or UKG workforce) app checks for root or modifications to device
 - Checks if your phone is in `release` mode and if USB debugging is active (AKA `adb`).
 	- Might be checking for release mode via `getprop ro.build.type`!=user or `getprop ro.debuggable`!=0?
 - Checks if you are emulating or spoofing anything.
