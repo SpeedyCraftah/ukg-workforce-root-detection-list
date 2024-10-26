@@ -6,7 +6,7 @@ A list of ways I found the UKG Workforce (formally known as Kronos) app uses to 
 
 *A former supermarket employee forced to use Kronos for checking timesheets.*
 
-(by the way android root users can still use your web dashboard which does the same thing as your app 😱😱😱)
+(by the way android root users can still use your web dashboard which does the same thing as your app 😱😱)
 ```
 
 ## Ways that the Kronos (or UKG workforce) app checks for root or modifications to device:
@@ -33,7 +33,7 @@ A list of ways I found the UKG Workforce (formally known as Kronos) app uses to 
 - Checks if any "untrusted" apps are installed on the device via the `PackageManager`.
 	- These include: `com.koushikdutta.rommanager`, `com.koushikdutta.rommanager.license`, `com.dimonvideo.luckypatcher`, `com.chelpus.lackypatch`, `com.ramdroid.appquarantine`, `com.ramdroid.appquarantinepro`, `com.android.vending.billing.InAppBillingService.COIN`, `com.chelpus.luckypatcher`, `com.noshufou.android.su`, `com.noshufou.android.su.elite`, `eu.chainfire.supersu`, `com.koushikdutta.superuser`, `com.thirdparty.superuser`, `com.yellowes.su`, `com.topjohnwu.magisk`, `com.devadvance.rootcloak`, `com.devadvance.rootcloakplus`, `de.robv.android.xposed.installer`, `com.saurik.substrate`, `com.zachspong.temprootremovejb`, `com.amphoras.hidemyroot`, `com.amphoras.hidemyrootadfree`, `com.formyhm.hiderootPremium`, `com.formyhm.hideroot`, `me.phh.superuser`, `eu.chainfire.supersu.pro`, `com.kingouser.com`, `com.jrummy.root.browserfree`, `com.oasisfeng.greenifiy`, `com.jrummy.apps.build.prop.editor`, `com.grarak.kerneladiutor`, `org.namelessrom.devicecontrol`, `com.jumobile.manager.systemapp`.
 	- I'd like to also point out some of these aren't even root-exclusive apps, for example Greenify has a non-root mode so I guess if you're a non-root Greenify user you're being discriminated against as well.
- 	- Plus, as the Momo app correctly points out, detecting root access by checking if specific apps exists on the system is bad practice and discouraged by Google, although they still accept apps into the playstore with these detections in place so double standards? 
+ 	- Plus, as the [Momo app](https://github.com/apkunpacker/MagiskDetection) correctly points out, detecting root access by checking if specific apps exists on the system is bad practice and discouraged by Google, although they still accept apps into the playstore with these detections in place so double standards? 
 - Checks if any known tools/names are mapped into the apps process by reading `/proc/PID/maps`, if it's readable.
 	- Checks if the read dump contains the strings: `frida`, `frida-agent`, `gum-js-loop`, `gmain`.
 	- By the way, just wanted to mention that this was terribly written and is incredibly inefficient and does the same checks on large string buffers multiple times; while it doesn't really matter for one-time start-up root checks, come on, these developers are likely being paid a fortune to write terrible code that I've seen GCSE students (aged 16 & under) write much butter, not even the Java build optimiser was able to save this abomination of a function.
